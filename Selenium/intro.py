@@ -6,10 +6,13 @@ import selenium
 PATH = "__path_placeholder"
 
 # define driver
-driver = selenium.webdriver
+driver = selenium.webdriver.Chrome(PATH)
 
 # Open webbrowser
 driver.get("https://google.com")
+
+# Get title of webpage
+print(driver.title)
 
 # close current tab
 driver.close()
