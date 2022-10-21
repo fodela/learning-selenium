@@ -75,3 +75,64 @@ driver.close()
 ```python
 driver.quit()
 ```
+
+### Accessing attribute and elements of a webpage
+
+**Attributes**
+
+Title
+
+```python
+title = driver.title
+```
+
+Source code
+
+```python
+source_code = driver.page_source
+```
+
+Note: There are many more attributes and typing `driver.` will give you a list of attribute as autocompletion options.
+
+Elements can be accessed by:
+
+- id with `By.ID`
+- name with `NAME`
+- xpath with `XPATH`
+- css_selector with `CSS_SELECTOR`
+
+We must first import By
+
+```python
+from selenium.webdriver.common.by import by
+```
+
+```python
+from selenium.common import By
+```
+
+1. Get a single element
+2. `find_element: (by: str = By.ID, value: Any | None = None) -> WebElement`
+
+```python
+from selenium import By
+   # syntax
+   element = find_element(by, value)
+
+   #e.g
+   search_box = find_element(By.ID, "searchID")
+
+```
+
+Get a list of elements
+`find_elements: (by: str = By.ID, value: Any | None = None) -> WebElement`
+
+```python
+from selenium import By
+   # syntax
+   elements = find_elements(by, value)
+
+   #e.g
+   all_buttons = find_element(By.TAG_NAME, "button")
+
+```
