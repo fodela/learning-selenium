@@ -42,3 +42,36 @@ python3 -m pip install selenium
 
 Install web driver
 You can install either [Chrome webdriver]() or [firefox webdriver]()
+
+#### Open and close tabs
+
+```python
+from selenium import webdriver
+```
+
+1. set up the driver
+
+```python
+
+    PATH = "path_to_where_you_downloaded_the_webdriver"
+   driver = webdriver(PATH)
+```
+
+2. Open a webpage
+
+```python
+website_url = "https//:www.google.com"
+driver.get(website_url)
+```
+
+3. Close the current browser tab
+
+```python
+driver.close()
+```
+
+4. Close the browser window
+
+```python
+driver.quit()
+```
