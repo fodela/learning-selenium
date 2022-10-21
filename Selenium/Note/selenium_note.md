@@ -136,3 +136,11 @@ from selenium import By
    all_buttons = find_element(By.TAG_NAME, "button")
 
 ```
+
+### Interacting with the page
+
+#### By keyboard
+
+We import Keys for "keyboard" from selenium.webdriver.common.KEYS
+
+To press the keyboard we use the method `send_keys: value: Any -> None`
