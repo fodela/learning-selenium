@@ -20,18 +20,27 @@ driver = webdriver.Chrome(PATH)
 driver.get(URL)
 
 try:
-    seasons = WebDriverWait(driver, 30).until(
-        EC.presence_of_element_located((By.TAG_NAME, "ul"))
-    )
-    seasons = driver.find_element(By.TAG_NAME, "ul")
+    # seasons = WebDriverWait(driver, 30).until(
+    #     EC.presence_of_element_located((By.TAG_NAME, "ul"))
+    # )
+    # seasons = driver.find_element(By.TAG_NAME, "ul")
 
-    seasons_list = seasons.find_elements(By.TAG_NAME, "a")
+    # seasons_list = seasons.find_elements(By.TAG_NAME, "a")
 
-    # print(seasons)
-    for season in seasons:
-        print("######", season.text, "\n")
-        # season.click()
+    # # print(seasons)
+    # for season in seasons:
+    #     print("######", season.text, "\n")
+    #     # season.click()
 
+    # click on season
+
+    # loop through all episodes
+    # click on episode on the current page
+    # click download and wait
+    # click on continue download
+
+    #
+    pass
 except Exception as e:
     print(f"This error happened! =>>> {e}")
 
