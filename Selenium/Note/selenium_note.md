@@ -144,3 +144,46 @@ from selenium import By
 We import Keys for "keyboard" from selenium.webdriver.common.KEYS
 
 To press the keyboard we use the method `send_keys: value: Any -> None`
+
+#### Using the mouse
+
+Click
+
+```python
+element.click()
+```
+
+### Navigation
+
+Going back
+
+```python
+driver.back()
+```
+
+Going forward
+
+```python
+driver.forward()
+```
+
+### Action Chains
+
+Enable a predefine number of actions that will only be performed
+
+```python
+from selenium.webdriver.common.action_chains import ActionChains
+
+actions = ActionChains(driver)
+action.click()
+action.perform()
+```
+
+### Wait
+
+- **Implicitly wait** Waits for a number of time before executing the next line of code
+
+```python
+# implicitly_wait: secs: int -> None
+driver.implicitly_wait(5)
+```
