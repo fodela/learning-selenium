@@ -187,3 +187,54 @@ action.perform()
 # implicitly_wait: secs: int -> None
 driver.implicitly_wait(5)
 ```
+
+- **WebDriverWait**: waits for a number of seconds until an element is on the page.
+
+```python
+from selenium.webdriver.support.ui import WebDriverWait
+
+```
+
+### OOP approach
+
+Objects:
+
+1. Pages
+2. Elements
+3. Locators
+
+**Pages**
+Has the following objects:
+
+1. Base page: this page has attributes that all other pages inherit from
+
+```python
+class BasePage():
+   def __init__(self, driver)-> None:
+      self.driver = driver
+```
+
+2. Customized pages
+   They inherit from the BasePage
+   They have methods that perform specific things on the page.
+
+   ```python
+   class HomePage(BasePage):
+      def is_title_matches(self, title_keyword: str) -> bool:
+         return title_keyword in self.driver.title
+   ```
+
+**Elements**
+This object has methods that set and get element on the page. We can think of it as a blueprint for setting and getting element.
+
+```python
+from selenium.webdriver.support.ui import WebdriverWait
+class BasePageElement():
+   def __set__(self, obj, value):
+      WebDriverWait(driver, 100).until(
+         lambda driver: driver.find_element_by_name(self.locator)
+      )
+```
+
+**Locators**
+Predefine locators to prevent repetition DRY principles.
