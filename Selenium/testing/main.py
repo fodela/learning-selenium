@@ -17,6 +17,11 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_search_in_python_org(self):
         main_page = page.MainPage(self.driver)
+        assert main_page.is_title_matches()
+        main_page.search_text_element = "pycon"
+        main_page.click_go_button()
+        search_result_page = page.SearchResultPage(self.driver)
+        assert search_result_page.is_results_found()
 
     def tearDown(self) -> None:
         self.driver.close()

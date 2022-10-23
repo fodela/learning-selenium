@@ -5,7 +5,7 @@ class MainPageLocators():
     GO_BUTTON = (By.ID, "submit")
 
 
-# class MainPageLocator():
+# class MainPageLocators():
 #     def __init__(self, condition: str, locator_name: str) -> None:
 #         self.condition = condition
 #         self.locator_name = locator_name
