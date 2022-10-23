@@ -1,7 +1,12 @@
 from selenium import webdriver
+from elements import BasePageElement
 
 from Selenium.testing.locators import MainPageLocators
 # Base page
+
+
+class SearchTextElement(BasePageElement):
+    pass
 
 
 class BasePage():
