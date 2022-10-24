@@ -2,4 +2,5 @@ from selenium.webdriver.common.by import By
 
 
 class TwitterHomePageLocator():
-    TWEET_BUTTON = (By.ID, "")
+    def __init__(self) -> None:
+        TWEET_BUTTON = (By.ID, "")
