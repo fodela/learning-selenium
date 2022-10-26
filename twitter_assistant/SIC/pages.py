@@ -1,21 +1,17 @@
-from selenium import webdriver
 
-import locators
+from locators import TwitterHomePageLocator
 
 
 class BasePage():
-    def __init__(self) -> None:
-        self.driver = webdriver
+    def __init__(self, driver) -> None:
+        self.driver = driver
 
 
 class TwitterHomePage(BasePage):
     def type_tweet(self, tweet: str):
-        pass
+        twitter_post_box = self.driver.find_element(
+            *TwitterHomePageLocator.TWITTER_POST_BOX)
 
     def click_tweet_button(self, type: str) -> None:
-        locator = locators.TwitterHomePageLocator(type, "elemento")
-
-
-if __name__ == "__main__":
-    program = TwitterHomePage()
-    program.click_tweet_button("name")
+        tweet_button = self.driver.find_element(
+            *TwitterHomePageLocator.TWEET_BUTTON)
